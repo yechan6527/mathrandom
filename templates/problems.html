@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문제 생성</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="area">
+            <h1>문제 생성 결과</h1>
+            <ul>
+                {% for problem, answer in problems %}
+                <li class="problem">
+                    <strong>문제 : </strong> {{ problem }}
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="button">
+                <a href="#area2">답 확인하기</a>
+            </div>
+        </div>
+    
+        <div id="area2">
+            <h1>채점하기</h1>
+            <ul>
+                {% for problem, answer in problems %}
+                <li>
+                    <strong>문제 : </strong> {{ problem }}
+                    <br>
+                    <strong>답 : </strong> {{ answer }}
+                </li>
+                {% endfor %}
+            </ul>
+    
+            <form action="/" method="get">
+                <input type="submit" value="첫 화면으로 돌아가기">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

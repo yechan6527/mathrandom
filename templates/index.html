@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문제 수 입력</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>등차, 등비수열 기본 문제 정복하기</h1>
+    <form method="post" action="/">
+        <label for="num_problems">원하는 문제 수 :</label>
+        <input type="number" id="num_problems" name="num_problems" min="1" max="100" required>
+        <br><br>
+        <input type="submit" value="문제 생성">
+    </form>
+</body>
+</html>
